@@ -1,0 +1,18 @@
+<a href="/">Home</a>
+<a href="/pokemon">Favorites</a>
+<h1><%= details.name %></h1>
+<h2>Pokedex #<%= details.id %></h2>
+
+<img src="<%= details.sprites.other['official-artwork'].front_default %>" /><br>
+<img src="<%= details.sprites.front_default %>" />
+<img src="<%= details.sprites.back_default %>" />
+
+<h4>Types:</h4>
+<ul>
+    <% details.types.forEach(type => { %>
+        <li><%= type.type.name %></li>
+    <% }) %>
+</ul>
+
+<h4>Height: <%= details.height %></h4>
+<h4>Weight: <%= details.weight %></h4>

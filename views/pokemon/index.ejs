@@ -1,0 +1,9 @@
+<h1> Favorite Pokemon </h1>
+<a href="/">Home</a>
+
+<% faveMons.forEach(mon => { %>
+    <h3><a href="pokemon/<%= mon.name %>"><%= mon.name %></a></h3>
+    <form method="POST" action="/pokemon/<%= mon.name %>/?_method=DELETE">
+    <button type="submit">I don't want to play with you anymore</button>
+    </form>
+<% }) %>
